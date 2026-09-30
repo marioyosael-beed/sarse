@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Feliz 30 de septiembre</title>
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0
+        }
+
+        body {
+            background: radial-gradient(ellipse at 50% 40%, #0a1a3f, #040b1f);
+            display: flex;
+            justify-content: center;
+            overflow: hidden;
+            font-family: system-ui
+        }
+
+        svg {
+            height: 100%;
+            max-width: 100%
+        }
+
+        .t {
+            font-size: 34px;
+            fill: #2fb8f0;
+            text-anchor: middle;
+            font-family: "Comic Sans MS", sans-serif
+        }
+
+        .f {
+            font-size: 30px;
+            font-weight: 800;
+            fill: #ffd23f;
+            text-anchor: middle;
+            opacity: 0;
+            transition: opacity 1s
+        }
+
+        .f.on {
+            opacity: 1
+        }
+
+        .sw {
+            transform-box: fill-box;
+            transform-origin: 50% 100%;
+            animation: sw 3.6s ease-in-out infinite alternate
+        }
+
+        @keyframes sw {
+            from {
+                transform: rotate(-3deg)
+            }
+
+            to {
+                transform: rotate(3deg)
+            }
+        }
+
+        .st {
+            animation: tw 2.4s ease-in-out infinite
+        }
+
+        @keyframes tw {
+            50% {
+                opacity: .15
+            }
+        }
+
+        #lid {
+            transform-box: fill-box;
+            transform-origin: 0 100%;
+            transition: transform .7s
+        }
+
+        #g.open #lid {
+            transform: rotate(-55deg)
+        }
+    </style>
+</head>
+
+<body>
+    <svg id="s" viewBox="0 0 360 640">
+        <defs>
+            <clipPath id="c">
+                <rect x="-25" y="-31" width="50" height="62" rx="4" />
+            </clipPath>
+        </defs>
+        <g id="stars"></g>
+        <text class="t" x="180" y="58">Feliz 30 de</text>
+        <text class="t" x="180" y="100">septiembre mi bro</text>
+        <text class="f" id="f" x="180" y="148">¡Felis 30 chico! 🎉
+            <g id="stems" stroke="#2e9c3a" stroke-width="3"></g>
+            <path d="M180 552 L78 360 Q70 335 92 345 L190 470Z" fill="#7aa9dd" />
+            <path d="M180 552 L282 360 Q290 335 268 345 L170 470Z" fill="#8fb8e6" />
+            <path d="M180 552 L120 400 L240 400Z" fill="#5f93d3" />
+            <g id="cards"></g>
+            <path d="M180 538 l-22 -12 v24z M180 538 l22 -12 v24z" fill="#3b82d6" />
+            <circle cx="180" cy="538" r="6" fill="#9cc8ff" />
+            <g id="r"></g>
+            <g id="g" transform="translate(150 566)" style="cursor:pointer">
+                <rect y="16" width="60" height="42" rx="4" fill="#2f6fd0" />
+                <rect x="26" y="16" width="8" height="42" fill="#ffd23f" />
+                <g id="lid">
+                    <rect x="-4" y="4" width="68" height="14" rx="3" fill="#3b82d6" />
+                    <rect x="26" y="4" width="8" height="14" fill="#ffd23f" />
+                </g>
+                <text x="30" y="80" text-anchor="middle" font-size="11" fill="#9cc8ff">Ábrelo 🎁</text>
+            </g>
+    </svg>
+    <script>
+        const $ = i => document.getElementById(i);
+        const CARD = "data:image/jpeg;base64,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";
+        const CAR = "data:image/webp;base64,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";
+        let s = "";
+        for (let i = 0; i < 40; i++)s += `<circle class="st" cx="${Math.random() * 360}" cy="${Math.random() * 640}" r="${.6 + Math.random() * 1.3}" fill="#cfe6ff" style="animation-delay:${Math.random() * 3}s"/>`;
+        $("stars").innerHTML = s;
+        const P = [[112, 270, -16], [150, 215, -6], [190, 195, 2], [232, 225, 10], [262, 275, 20], [128, 330, -12], [178, 300, 0], [228, 325, 12]];
+        let a = "", b = "";
+        P.forEach(([x, y, r], i) => {
+            a += `<line x1="${x}" y1="${y + 28}" x2="180" y2="545"/>`;
+            b += `<g class="sw" style="animation-delay:${-i * .45}s"><g transform="translate(${x} ${y}) rotate(${r})"><image href="${CARD}" x="-25" y="-31" width="50" height="62" preserveAspectRatio="xMidYMid slice" clip-path="url(#c)"/><rect x="-25" y="-31" width="50" height="62" rx="4" fill="none" stroke="#e6f3ff"/></g></g>`;
+        });
+        $("stems").innerHTML = a; $("cards").innerHTML = b;
+        let done = 0;
+        $("g").onclick = () => {
+            if (done) return; done = 1;
+            $("g").classList.add("open"); $("f").classList.add("on");
+            const d = "M180 210 C330 210 335 560 180 560 C25 560 30 210 180 210Z";
+            let h = "";
+            for (let i = 0; i < 4; i++) {
+                const t = 5 + i * .5;
+                h += `<g><g><animateTransform attributeName="transform" type="scale" values="1 1;-1 1;1 1" keyTimes="0;.5;1" calcMode="discrete" dur="${t}s" begin="${i * .6}s" repeatCount="indefinite"/><image href="${CAR}" x="-40" y="-21" width="80" height="43"/></g><animateMotion dur="${t}s" begin="${i * .6}s" repeatCount="indefinite" path="${d}"/></g>`
+            }
+            $("r").insertAdjacentHTML("beforeend", h);
+        };
+    </script>
+</body>
+
+</html>
